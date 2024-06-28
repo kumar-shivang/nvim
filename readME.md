@@ -1,6 +1,8 @@
 # My NVim Config
 
-This is my personal Neovim configuration. I use it for web development and python programming. I used [LazyVim](https://www.lazyvim.org/) as a base and added some plugins and configurations that I like. I also added some key mappings that I use frequently.
+This is my personal Neovim configuration for web development and python programming.
+I used [LazyVim](https://www.lazyvim.org/) as a base and added some plugins and configurations that I like.
+I also added some key mappings that I use frequently.
 
 ## Installation
 
@@ -17,6 +19,6 @@ This is my personal Neovim configuration. I use it for web development and pytho
 
 ## Key Mappings
 
-* \<jj> - Exit insert mode
-* <C-.> - toggle second terminal
-* \<leader-S> - Take a screenshot of the current buffer or selection
+- \<jj> - Exit insert mode
+- <C-.> - toggle second terminal
+- \<leader-S> - Take a screenshot of the current buffer or selection
