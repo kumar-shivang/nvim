@@ -22,6 +22,9 @@ vim.api.nvim_set_keymap("i", "<M-u>", "<Home>", { noremap = true, silent = true 
 -- jj to escape in insert mode
 vim.api.nvim_set_keymap("i", "jj", "<Esc>", { noremap = true, silent = true })
 
+-- jk to escape and save in insert mode
+vim.api.nvim_set_keymap("i", "jk", "<Esc>:w<CR>", { noremap = true, silent = true })
+
 
 -- vim.api.nvim_set_keymap("n", "<C-.>", ":1ToggleTerm<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-.>", ":1ToggleTerm<CR>", { noremap = true, silent = true })
