@@ -25,7 +25,6 @@ vim.api.nvim_set_keymap("i", "jj", "<Esc>", { noremap = true, silent = true })
 -- jk to escape and save in insert mode
 vim.api.nvim_set_keymap("i", "jk", "<Esc>:w<CR>", { noremap = true, silent = true })
 
-
 -- vim.api.nvim_set_keymap("n", "<C-.>", ":1ToggleTerm<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-.>", ":1ToggleTerm<CR>", { noremap = true, silent = true })
 
@@ -45,10 +44,38 @@ vim.api.nvim_set_keymap("n", "<C-;>", ":AerialToggle<CR>", { noremap = true, sil
 
 -- <leader-td> to open todo
 vim.api.nvim_set_keymap("n", "<leader>td", ":TodoQuickFix<CR>", { noremap = true, silent = true })
+-- <leader-S> to capture screenshot
+-- vim.api.nvim_set_keymap("n", "<leader>S", ":Silicon<CR>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("v", "<leader>S", ":Silicon<CR>", { noremap = true, silent = true })
 
+local wk = require("which-key")
+wk.add({
+	mode = { "v" },
+	{ "<leader>S", group = "Silicon" },
+	-- {
+	-- 	"<leader>Sc",
+	-- 	function()
+	-- 		require("nvim-silicon").clip()
+	-- 	end,
+	-- 	desc = "Copy code screenshot to clipboard",
+	-- },
+	{
+		"<leader>Sf",
+		function()
+			require("nvim-silicon").file()
+		end,
+		desc = "Save code screenshot as file",
+	},
+	{
+		"<leader>Ss",
+		function()
+			require("nvim-silicon").shoot()
+		end,
+		desc = "Create code screenshot",
+	},
+})
 --add a shortcut for Copilot disable
-vim.api.nvim_set_keymap("n", "<leader>cp", ":Copilot disable<CR>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "<leader>cp", ":Copilot disable<CR>", { noremap = true, silent = true })
 
 --add a shortcut for Copilot enable
-vim.api.nvim_set_keymap("n", "<leader>cP", ":Copilot enable<CR>", { noremap = true, silent = true })
-
+-- vim.api.nvim_set_keymap("n", "<leader>cP", ":Copilot enable<CR>", { noremap = true, silent = true })
